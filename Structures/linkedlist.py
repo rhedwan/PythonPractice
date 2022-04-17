@@ -67,6 +67,18 @@ class LinkedList:
         print(count)
         return 
 
+    def nth_node(self, n):
+        count = 0 
+        cur_node = self.head
+        while cur_node:
+            if count == n:
+                print(cur_node.data)
+                return
+            count += 1
+            cur_node = cur_node.next
+        cur_node = None
+        return
+
 
 
 
@@ -91,3 +103,5 @@ print("After Deletion")
 llist.delete_node("D")
 llist.print_list()
 llist.lenght() 
+llist.nth_node(0)
+llist.nth_node(1)
