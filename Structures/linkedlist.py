@@ -57,6 +57,16 @@ class LinkedList:
         prev.next = cur_node.next
         cur_node = None
 
+    def lenght(self):
+        count = 0
+        cur_node = self.head
+        while cur_node:
+            cur_node = cur_node.next
+            count += 1  
+        cur_node = None
+        print(count)
+        return 
+
 
 
 
@@ -79,4 +89,5 @@ llist.delete_node("B")
 llist.print_list() 
 print("After Deletion")
 llist.delete_node("D")
-llist.print_list() 
+llist.print_list()
+llist.lenght() 
